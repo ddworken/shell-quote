@@ -9,7 +9,7 @@ module.exports = function quote(xs) {
 			return s.op.replace(/(.)/g, '\\$1');
 		}
 		if ((/["\s]/).test(s) && !(/'/).test(s)) {
-			return "'" + s.replace(/(['\\])/g, '\\$1') + "'";
+			return "'" + s.replace(/(['])/g, '\\$1') + "'";
 		}
 		if ((/["'\s]/).test(s)) {
 			return '"' + s.replace(/(["\\$`!])/g, '\\$1') + '"';
