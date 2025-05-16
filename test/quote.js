@@ -49,7 +49,7 @@ test('quote windows paths', { skip: 'breaking change, disabled until 2.x' }, fun
 
 test("chars for windows paths don't break out", function (t) {
 	var x = '`:\\a\\b';
-	t.equal(quote([x]), '\\`\\:\\\\a\\\\b');
+	t.equal(quote([x]), "'`:\\a\\b'");
 	t.end();
 });
 
